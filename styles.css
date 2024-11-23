@@ -1,12 +1,12 @@
 :host {
-    --border-color-dark: #c9d640;
-    --border-color-light: #fcdd02;
+    --border-color-dark: #4ac8dd;
+    --border-color-light: #4ac8dd;
     --text-color-secondary: #434242;
     --background-color-light: #f2fff6;
-    --background-color-medium: #26c19d;
-    --header-gradient-start: #40e7c0;
-    --header-gradient-middle: #cfdc53;
-    --header-gradient-end: #fcdd02;
+    --background-color-medium: #70cdae;
+    --header-gradient-start: #40E7C0;
+    --header-gradient-middle: #70cdae;
+    --header-gradient-end: #70cdae;
     --button-border: #26c19d;
     --button-fill: #f4fff9;
     --system-message: #f0f0f0;
@@ -181,13 +181,14 @@
     inset: 0;
     color: #ffffff;
     border-radius: 7.5px;
-    background-color: #185c2e;
+    background-color: var(--border-color-dark);
     content: "Start ny samtale";
   }
   
   .vfrc-prompt button.vfrc-button--primary[label="End Chat"]::after,
   footer button.vfrc-button--primary[label="End Chat"]::after {
     content: "Avslutt samtale";
+    background-color: var(--border-color-dark)
   }
   
   .vfrc-prompt button.vfrc-button--primary[label=Cancel]::after,

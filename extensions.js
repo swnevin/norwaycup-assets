@@ -6,6 +6,7 @@ const FormExtension = {
   render: ({ trace, element }) => {
     const formContainer = document.createElement('form');
 
+    // HTML-struktur legges til som en streng
     formContainer.innerHTML = `
       <label for="name">Navn</label>
       <input type="text" class="name" name="name" required><br>
@@ -20,6 +21,7 @@ const FormExtension = {
       <input type="submit" class="submit" value="Send">
     `;
 
+    // CSS-stiler legges til i dokumenthodet (head)
     const style = document.createElement('style');
     style.textContent = `
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
@@ -78,6 +80,7 @@ const FormExtension = {
     `;
     document.head.appendChild(style);
 
+    // Håndtering av inputvalidering
     formContainer.addEventListener('input', function () {
       const name = formContainer.querySelector('.name');
       const email = formContainer.querySelector('.email');
@@ -88,6 +91,7 @@ const FormExtension = {
       if (message.checkValidity()) message.classList.remove('invalid');
     });
 
+    // Håndtering av skjema-submitter
     formContainer.addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -118,6 +122,7 @@ const FormExtension = {
       });
     });
 
+    // Legg til skjemaet i elementet
     element.appendChild(formContainer);
   },
 };

@@ -43,7 +43,6 @@
   </style>
 </head>
 <body>
-  <div id="voiceflow-widget"></div>
   <script src="https://swnevin.github.io/norwaycup_assets/extensions.js"></script>
   <script type="text/javascript">
     let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
@@ -58,6 +57,7 @@
           versionID: 'production',
           allowDangerousHTML: true,
           assistant: {
+            extensions: [FormExtension],
             stylesheet: widgetStyleSheet
           }
         }).then(() => {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwaycup Testside</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.postimg.cc/SQtwdRyv/Skjermbilde-2024-11-23-170757.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .content {
+      text-align: center;
+      color: white;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+      margin: 50px auto;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    /* Responsive styles for mobile devices */
+    @media (max-width: 768px) {
+      body {
+        background-size: cover;
+      }
+
+      .content {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content {
+        margin: 10px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content"></div>
+  <script src="https://swnevin.github.io/norwaycup_assets/extensions.js"></script>
+  <script type="text/javascript">
+    let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
+    let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
+
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6731f899edb0f15aba630fef' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          allowDangerousHTML: true,
+          assistant: {
+            stylesheet: widgetStyleSheet,
+            extensions: [ FormExtension ]
+          },
+          launch: {
+            event: { type: "launch", payload: { browser_url: window.location.href } }
+          }
+        }).then(() => {
+          window.voiceflow.chat.proactive.clear();
+          window.voiceflow.chat.proactive.push(
+            { type: 'text', payload: { message: proactiveMessage } }
+          );
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </body>
+</html>

@@ -23,7 +23,6 @@
       border-radius: 10px;
     }
 
-    /* Responsive styles for mobile devices */
     @media (max-width: 768px) {
       body {
         background-size: cover;
@@ -44,7 +43,7 @@
   </style>
 </head>
 <body>
-  <div class="content"></div>
+  <div id="voiceflow-widget"></div>
   <script src="https://swnevin.github.io/norwaycup_assets/extensions.js"></script>
   <script type="text/javascript">
     let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
@@ -59,22 +58,20 @@
           versionID: 'production',
           allowDangerousHTML: true,
           assistant: {
-            extensions: [FormExtension],
             stylesheet: widgetStyleSheet
-          },
-          launch: {
-            event: { type: "launch", payload: { browser_url: window.location.href } }
           }
         }).then(() => {
+          console.log('Voiceflow widget loaded successfully');
           window.voiceflow.chat.proactive.clear();
           window.voiceflow.chat.proactive.push(
             { type: 'text', payload: { message: proactiveMessage } }
           );
-        });
+        }).catch((err) => console.error('Widget load failed:', err));
       };
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
       v.type = "text/javascript";
       s.parentNode.insertBefore(v, s);
     })(document, 'script');
-  </body>
+  </script>
+</body>
 </html>

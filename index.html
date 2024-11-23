@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norwaycup Testside</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('https://i.postimg.cc/SQtwdRyv/Skjermbilde-2024-11-23-170757.png') no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-    }
-
-    .content {
-      text-align: center;
-      color: white;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
-      margin: 50px auto;
-      max-width: 800px;
-      border-radius: 10px;
-    }
-
-    /* Responsive styles for mobile devices */
-    @media (max-width: 768px) {
-      body {
-        background-size: cover;
-      }
-
-      .content {
-        margin: 20px;
-        padding: 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .content {
-        margin: 10px;
-        padding: 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rush testmiljø</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #EE2A1E;
+            font-family: Arial, sans-serif;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #border-right {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 20vw; /* Justert bredde til 20% av viewport-bredden */
+            height: 100%;
+            background-color: rgba(238, 42, 30, 0.8);
+            pointer-events: none;
+        }
+        #chatbot-highlight {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 20vw; /* Justert bredde */
+            height: 20vw; /* Justert høyde for å beholde kvadratisk form */
+            background: radial-gradient(circle at bottom right, rgba(255,255,255,0.5), transparent);
+            pointer-events: none;
+        }
+        #background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10vw; /* Bruker viewport-enheter for responsiv fontstørrelse */
+            color: rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+        }
+        /* Justerer fontstørrelse for mindre skjermer */
+        @media (max-width: 600px) {
+            #background-text {
+                font-size: 8vw;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="content"></div>
-  <script src="https://swnevin.github.io/norwaycup_assets/extensions.js"></script>
-  <script type="text/javascript">
+    <canvas id="canvas"></canvas>
+    <div id="border-right"></div>
+    <div id="chatbot-highlight"></div>
+    <div id="background-text">Rushie testmiljø</div>
+
+    <script src="https://swnevin.github.io/norwaycup_assets/extensions.js"></script>
     let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
     let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
 

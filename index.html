@@ -5,61 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Norwaycup Testside</title>
   <style>
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Sikrer at innholdet vises riktig */
       background: url('https://i.postimg.cc/SQtwdRyv/Skjermbilde-2024-11-23-170757.png') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
     }
 
-    #border-right {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 20vw;
-      height: 100%;
-      background-color: rgba(238, 42, 30, 0.8);
-      pointer-events: none;
+    .content {
+      text-align: center;
+      color: white;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+      margin: 50px auto;
+      max-width: 800px;
+      border-radius: 10px;
     }
 
-    #chatbot-highlight {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      width: 20vw;
-      height: 20vw;
-      background: radial-gradient(circle at bottom right, rgba(255,255,255,0.5), transparent);
-      pointer-events: none;
+    /* Responsive styles for mobile devices */
+    @media (max-width: 768px) {
+      body {
+        background-size: cover;
+      }
+
+      .content {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content {
+        margin: 10px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="border-right"></div>
-  <div id="chatbot-highlight"></div>
+  <div class="content"></div>
   <script src="https://swnevin.github.io/norwaycup_assets/extensions.js"></script>
   <script type="text/javascript">
+    let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
+    let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
+
     (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
-        console.log("Voiceflow script loaded"); // Debugging
         window.voiceflow.chat.load({
-          verify: { projectID: '6735fdc05166937605e0dba6' }, // Bekreft ID-en
+          verify: { projectID: '6735fdc05166937605e0dba6' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production', // Bekreft riktig versjon
+          versionID: 'production',
           allowDangerousHTML: true,
           assistant: {
-            extensions: [FormExtension], // FormExtension må være definert
-            stylesheet: ['https://swnevin.github.io/norwaycup_assets/styles.css'],
+            stylesheet: widgetStyleSheet
+          },
+          launch: {
+            event: { type: "launch", payload: { browser_url: window.location.href } }
           }
+        }).then(() => {
+          window.voiceflow.chat.proactive.clear();
+          window.voiceflow.chat.proactive.push(
+            { type: 'text', payload: { message: proactiveMessage } }
+          );
         });
       };
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
       v.type = "text/javascript";
       s.parentNode.insertBefore(v, s);
     })(document, 'script');
-  </script>
-</body>
+  </body>
 </html>
-

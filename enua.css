@@ -1,0 +1,219 @@
+:host {
+    --black: #131e2a;
+    --green:#bde3a0;
+    --white: #ffffff;
+    --charcoal:#3b455b;
+    --grey:#eef0fb;
+    font-family: 'Manrope', sans-serif;
+}
+
+ .vfrc-widget--chat {
+    border-radius: 0px;
+    width: 150%;
+    height: 200%;
+    border: 1px solid var(--black);
+    background: var(--black);
+  }
+  
+
+  #chat-container {
+    width: 90%;
+    max-width: 700px;
+    height: 700px;
+    max-height: 100vh;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0 0 0 20px var(--black); /* Farge på "paddingen" */
+    background: #ffffff; /* Fargen til selve chatboksen */
+    overflow: hidden;
+}
+
+.vfrc-bubble {
+    background-color: #71a449;
+}
+
+.vfrc-header {
+       background: url('https://cdn.prod.website-files.com/64464e23e1f249b3dd302ed6/64464e54a538ab1ef7d92881_Horizontal%20logo.svg') no-repeat center;
+        background-size: contain; /* Tilpasser SVG-en til å passe innenfor headeren */
+        height: 40px;
+        width: 100%; /* Headeren fyller hele bredden */
+        transform: translateX(-20px);
+        padding: 10px;
+    }
+
+.vfrc-header .vfrc-avatar, 
+.vfrc-assistant-info .vfrc-avatar, 
+.vfrc-assistant-info--title {
+     opacity: 0;
+    }
+  
+.vfrc-footer { 
+    border-radius: 0px;
+    background: var(--black);
+  }
+  
+  
+.vfrc-assistant-info--description {
+  color: var(--text-color-secondary);
+  font-family:'Manrope', sans-serif;
+  font-size: 1.12em;
+  transform: translateY(-8.5em);
+  }
+  
+  .vfrc-chat--session-time,
+  .vfrc-chat--status::placeholder {
+  background-image: none;
+  color: transparent;
+  }
+  
+  .vfrc-chat--session-time,
+  .vfrc-chat--status {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='250px'><text x='60' y='30' fill='%2371a449' font-family='Arial' font-size='13'>Enua</text></svg>");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  
+  
+  .vfrc-button--secondary {
+  border-radius: 10px;
+  border: 1.6px solid var(--black);
+  font-weight: 200;
+  background-color: var(--grey);
+  font-family: 'Manrope', sans-serif;
+  }
+  
+  .vfrc-button--secondary:hover {
+  border-radius: 10px;
+  border: 1.6px solid var(--green);
+  font-weight: 200;
+  background-color: var(--grey);
+  }
+  
+  .vfrc-button--primary[label="End Chat"],
+  .vfrc-button--primary[label="Cancel"] {
+  border-radius: 10px;
+  color: var(--white);
+  border: 1.6px solid var(--black);
+  font-family: 'Manrope', sans-serif;
+  }
+  
+  .vfrc-button--primary[label="End Chat"] {
+  background-color: var(--black);
+  }
+  
+  .vfrc-button--primary[label="Cancel"] {
+  background-color: var(--grey);
+  }
+  
+  
+  .vfrc-prompt {
+  border: 1.6px solid var(--black);
+  }
+  
+  /* Tekstbobler */
+  .vfrc-system-response .vfrc-message {
+  background-color: var(--grey);
+  color: var(--black);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0px; 
+  border-bottom-right-radius: 15px;
+  font-family: 'Manrope', sans-serif;
+  }
+  
+  .vfrc-user-response .vfrc-message {
+  background-color: var(--charcoal);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 0px; 
+  font-family: 'Manrope', sans-serif;
+  }
+  
+  /* Chat inndatafelt */
+  .vfrc-chat-input {
+  border: 0.5px solid var(--green);
+  border-radius: 15.5px;
+  }
+  
+  .vfrc-chat-input textarea {
+  background-image: none;
+  }
+  
+  .vfrc-chat-input textarea::-moz-placeholder {
+  color: transparent;
+  }
+  
+  .vfrc-chat-input textarea::placeholder {
+  color: transparent;
+  }
+  
+  .vfrc-chat-input textarea:-moz-placeholder-shown { 
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='250px'><text x='15' y='25' fill='%2371a449' font-family='Arial' font-size='15'>Send melding...</text></svg>");
+  background-repeat: no-repeat;
+  }
+  
+  .vfrc-chat-input textarea:placeholder-shown {
+  background-image: 
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='40px' width='500px'><text x='42' y='25' fill='%2371a449' font-family='Arial' font-size='15'>Skriv melding...</text></svg>"),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='40' height='35' fill='%2371a449'><path d='M17.659,3.681H8.468c-0.211,0-0.383,0.172-0.383,0.383v2.681H2.341c-0.21,0-0.383,0.172-0.383,0.383v6.126c0,0.211,0.172,0.383,0.383,0.383h1.532v2.298c0,0.566,0.554,0.368,0.653,0.27l2.569-2.567h4.437c0.21,0,0.383-0.172,0.383-0.383v-2.681h1.013l2.546,2.567c0.242,0.249,0.652,0.065,0.652-0.27v-2.298h1.533c0.211,0,0.383-0.172,0.383-0.382V4.063C18.042,3.853,17.87,3.681,17.659,3.681 M11.148,12.87H6.937c-0.102,0-0.199,0.04-0.27,0.113l-2.028,2.025v-1.756c0-0.211-0.172-0.383-0.383-0.383H2.724V7.51h5.361v2.68c0,0.21,0.172,0.382,0.383,0.382h2.68V12.87z M17.276,9.807h-1.533c-0.211,0-0.383,0.172-0.383,0.383v1.755L13.356,9.92c-0.07-0.073-0.169-0.113-0.27-0.113H8.851v-5.36h8.425V9.807z' transform='translate(4,4)'/></svg>"); 
+  background-repeat: no-repeat;                                                                                             
+  background-color: var(--green);
+  }
+  
+  .vfrc-chat-input textarea:focus {
+  background-image: none;
+  }
+  
+  /* Sørg for at textarea har passende høyde for vertikal sentrering */
+  .vfrc-chat-input textarea,
+  .vfrc-chat-input textarea:not(:placeholder-shown),
+  .vfrc-chat-input--button {
+  line-height: 18px; /* Juster linjehøyden for vertikal sentrering */
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--green);
+  }
+  
+  .vfrc-chat-input textarea:focus {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  }
+  
+  /* Knappetekster og posisjon */
+  
+  .vfrc-prompt button.vfrc-button--primary,
+  footer button.vfrc-button--primary {
+    position: relative;
+    color: transparent !important;
+  }
+  
+  .vfrc-prompt button.vfrc-button--primary::after,
+  footer button.vfrc-button--primary::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    color: #ffffff;
+    border-radius: 7.5px;
+    background-color: #78643d ;
+    content: "Start ny samtale";
+  }
+  
+  .vfrc-prompt button.vfrc-button--primary[label="End Chat"]::after,
+  footer button.vfrc-button--primary[label="End Chat"]::after {
+    content: "Avslutt samtale";
+  }
+  
+  .vfrc-prompt button.vfrc-button--primary[label=Cancel]::after,
+  footer button.vfrc-button--primary[label=Cancel]::after {
+    content: "Avbryt";
+    color: var(--text-color-secondary);
+    background-color: #f5f3ef;
+  }

@@ -15,18 +15,20 @@
     background: var(--black);
   }
   
-
-  #chat-container {
-    width: 90%;
-    max-width: 700px;
-    height: 700px;
-    max-height: 100vh;
-    margin: 0 auto;
-    border: none;
-    border-radius: 0px;
-    box-shadow: 0 0 0 20px var(--black); /* Farge på "paddingen" */
-    background: #ffffff; /* Fargen til selve chatboksen */
-    overflow: hidden;
+#chat-container {
+  width: 90%;
+  max-width: 700px;
+  height: 700px; /* Sett en fast høyde */
+  max-height: 100vh;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 0 20px var(--black); /* "Padding"-effekten */
+  background: #ffffff; /* Bakgrunnsfarge for chatboksen */
+  overflow: hidden;
+  display: flex; /* Legg til flex for mer kontroll */
+  justify-content: center;
+  align-items: center;
 }
 
 .vfrc-bubble {

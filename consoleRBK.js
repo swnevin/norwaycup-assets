@@ -10,7 +10,6 @@
           versionID: 'production',
           allowDangerousHTML: true,
           assistant: {
-            extensions: FormExtension,
             stylesheet: widgetStyleSheet
           }
         }).then(() => {

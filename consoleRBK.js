@@ -1,6 +1,5 @@
  let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
     let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styleRBK.css";
-    let FormExtension = "https://swnevin.github.io/norwaycup_assets/extensions.js";
 
     (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];

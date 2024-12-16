@@ -53,10 +53,6 @@
   font-size: 1.12em;
   transform: translateY(-2em);
   }
-  /* Tekst og farge */
-  .vfrc-assistant-info--title {
-  color: var(--border-color-dark);
-  }
   
   .vfrc-assistant-info--description {
   color: var(--text-color-secondary);
@@ -76,10 +72,6 @@
   }
   
   /* Knappestiler */
-  .vfrc-button--thumbs-up {
-  size: 50%;
-  background-color: var(--text-color-secondary);
-  }
   
   .vfrc-button--secondary {
   border-radius: 10px;

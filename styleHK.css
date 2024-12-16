@@ -28,7 +28,31 @@
     border-top: 0.5px solid var(--border-color-light);
     background: linear-gradient(to right, var(--header-gradient-start) 40%, var(--header-gradient-middle));
   }
+    .vfrc-header--title {
+    font-family: 'Roboto', sans-serif; /* Base font family */
+    font-style: italic; /* Ensures italic style */
+    font-weight: bold; /* Ensures bold style */
+    letter-spacing: 0.05em; /* Slightly increases spacing between letters */
+    transform: translateY(1.5px);
+}
   
+  .vfrc-footer { 
+    border-radius: 0px;
+    border-top: 0.5px solid var(--border-color-light);
+    background: linear-gradient(to right, var(--header-gradient-start) 40%, var(--header-gradient-middle));
+  }
+  
+  /* Tekst og farge */
+  .vfrc-assistant-info--title {
+ opacity: 0;
+  }
+  
+  .vfrc-assistant-info--description {
+  color: var(--text-color-secondary);
+  font-family:'Open Sans', sans-serif;
+  font-size: 1.12em;
+  transform: translateY(-2em);
+  }
   /* Tekst og farge */
   .vfrc-assistant-info--title {
   color: var(--border-color-dark);

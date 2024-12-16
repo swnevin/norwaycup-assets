@@ -1,5 +1,5 @@
  let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
-    let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styleHK.css";
+    let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styleDP.css";
 
     (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];

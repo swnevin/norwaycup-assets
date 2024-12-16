@@ -1,7 +1,7 @@
 :host {
     --border-color-dark: #CA0022;
     --border-color-light: #CA0022;
-    --text-color-secondary: #ffffff;
+    --text-color-secondary: #333333;
     --background-color-light: #CA0022;
     --background-color-medium: #CA0022;
     --header-gradient-start: #CA0022;

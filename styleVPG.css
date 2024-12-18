@@ -18,6 +18,12 @@
     border-radius: 20px;
     border: 0.5px solid var(--border-color-light);
   }
+
+.vfrc-image {
+  width: 248px;
+  height: 248px;
+  object-fit: cover; /* Sikrer at bildet fyller området uten forvrengning */
+}
   
   .vfrc-header {
     background: linear-gradient(to right, var(--header-gradient-start) 40%, var(--header-gradient-end));

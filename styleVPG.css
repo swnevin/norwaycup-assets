@@ -19,10 +19,11 @@
     border: 0.5px solid var(--border-color-light);
   }
 
-.vfrc-image {
+.vfrc-card .vfrc-image {
   width: 248px;
   height: 248px;
-  object-fit: cover; /* Sikrer at bildet fyller området uten forvrengning */
+  object-fit: cover;
+  display: block; /* Sikrer at bildet fyller området uten forvrengning */
 }
   
   .vfrc-header {

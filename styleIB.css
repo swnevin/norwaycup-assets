@@ -14,7 +14,7 @@
   }
   
   /*Generelle stiler:*/
-  .vfrc-widget--chat {
+.vfrc-widget--chat {
     border-radius: 20px;
     border: 0.5px solid var(--border-color-light);
   }
@@ -63,7 +63,7 @@
   
   .vfrc-chat--session-time,
   .vfrc-chat--status {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='250px'><text x='60' y='30' fill='%23CA0022' font-family='Arial' font-size='13'>VPG</text></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='250px'><text x='60' y='30' fill='%23CA0022' font-family='Arial' font-size='13'>Instabot</text></svg>");
   background-repeat: no-repeat;
   background-position: left;
   }

@@ -1,11 +1,11 @@
- let proactiveMessage = "Halla, jeg hjelper deg gjerne!🤘";
-    let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styleVPG.css";
+ let proactiveMessage = "Hei, jeg hjelper deg gjerne!🤘";
+    let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styleIB.css";
 
     (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
-          verify: { projectID: '6744753fe736fed81f234e8f' },
+          verify: { projectID: '672d17f8933136cb162c773e' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
           allowDangerousHTML: true,

@@ -3,12 +3,12 @@
     --border-color-light: #4ac8dd;
     --text-color-secondary: #434242;
     --background-color-light: #f2fff6;
-    --background-color-medium: #70cdae;
-    --header-gradient-start: #40E7C0;
+    --background-color-medium: #1d617a;
+    --header-gradient-start: #4ac8dd;
     --header-gradient-middle: #4ac8dd;
-    --header-gradient-end: #4ac8dd;
+    --header-gradient-end: #2db6cd;
     --button-border: #4ac8dd;
-    --button-fill: #f4fff9;
+    --button-fill: #f2fff6;
     --system-message: #f0f0f0;
     --background-color-white: #ffffff;
   }
@@ -48,7 +48,7 @@
   
   .vfrc-chat--session-time,
   .vfrc-chat--status {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='250px'><text x='60' y='30' fill='%23434242' font-family='Arial' font-size='13'>Robot</text></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='250px'><text x='60' y='30' fill='%23434242' font-family='Arial' font-size='13'>Ekebert</text></svg>");
   background-repeat: no-repeat;
   background-position: left;
   }

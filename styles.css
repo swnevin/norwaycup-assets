@@ -26,7 +26,7 @@
   .vfrc-footer { 
     border-radius: 0px;
     border-top: 0.5px solid var(--border-color-light);
-    background: linear-gradient(to right, var(--header-gradient-start) 40%, var(--header-gradient-middle));
+    background: linear-gradient(to right, var(--header-gradient-middle) 40%, var(--header-gradient-middle));
   }
   
   /* Tekst og farge */

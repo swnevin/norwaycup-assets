@@ -38,6 +38,11 @@
   color: var(--text-color-secondary);
   font-size: 1.12em;
   transform: translateY(-2em);
+  line-height: 1.5em; 
+  overflow: visible; 
+  white-space: normal; 
+  display: block;
+  max-height: none; 
   }
   
   .vfrc-chat--session-time,

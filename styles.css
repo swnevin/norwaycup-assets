@@ -36,7 +36,8 @@
   
   .vfrc-assistant-info--description {
   color: var(--text-color-secondary);
-  size: 1.12em;
+  font-size: 1.12em;
+  transform: translateY(2em);
   }
   
   .vfrc-chat--session-time,

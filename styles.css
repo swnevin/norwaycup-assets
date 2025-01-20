@@ -222,6 +222,7 @@
   transform: translateY(15px);
   height: 24px;
   width: 24px;
+  position: fixed;
   }
   
   .vfrc-proactive-close:hover {
@@ -235,4 +236,19 @@
        right: 20px; /* Adjust the right spacing as needed */
        display: block !important;
    }
+
+ .voiceflow-chat {
+       position: fixed;
+       bottom: 20px; /* Adjust the bottom spacing as needed */
+       right: 20px; /* Adjust the right spacing as needed */
+       display: block !important;
+   }
+
+ .vf-chat {
+       position: fixed;
+       bottom: 20px; /* Adjust the bottom spacing as needed */
+       right: 20px; /* Adjust the right spacing as needed */
+       display: block !important;
+   }
+
    

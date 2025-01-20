@@ -228,3 +228,11 @@
   border: 0.5px solid var(--border-color-light);
   background-color: var(--button-fill);
   }
+
+ #voiceflow-chat {
+       position: fixed;
+       bottom: 20px; /* Adjust the bottom spacing as needed */
+       right: 20px; /* Adjust the right spacing as needed */
+       display: block !important;
+   }
+   

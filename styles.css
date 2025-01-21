@@ -241,4 +241,16 @@
     right: 24px;
 }
 
+@media (max-width: 480px) {
+    .vfrc-widget--launcher {
+        bottom: 12px !important; /* Mindre margin for veldig små skjermer */
+        right: 12px !important; /* Mindre margin for veldig små skjermer */
+    }
+
+    #voiceflow-chat {
+        bottom: 12px !important; /* Mindre margin for veldig små skjermer */
+        right: 12px !important; /* Mindre margin for veldig små skjermer */
+    }
+}
+
    

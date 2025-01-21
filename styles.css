@@ -222,12 +222,23 @@
   transform: translateY(15px);
   height: 24px;
   width: 24px;
-  position: fixed;
   }
   
   .vfrc-proactive-close:hover {
   border: 0.5px solid var(--border-color-light);
   background-color: var(--button-fill);
   }
+
+.vfrc-widget--launcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+}
+
+#voiceflow-chat {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+}
 
    
